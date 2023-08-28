@@ -17,7 +17,8 @@ RemoveDuplicatesFromSortedList_83.Check();
 // #203 https://leetcode.com/problems/remove-linked-list-elements/
 RemoveLinkedListElements_203.Check();
 
-
+// #206 https://leetcode.com/problems/reverse-linked-list/
+ReverseLinkedList_206.Check();
 #endregion
 
 Console.WriteLine("Ok, boy!");
