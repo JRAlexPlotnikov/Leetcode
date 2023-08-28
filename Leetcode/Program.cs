@@ -19,6 +19,10 @@ RemoveLinkedListElements_203.Check();
 
 // #206 https://leetcode.com/problems/reverse-linked-list/
 ReverseLinkedList_206.Check();
+
+// #876 https://leetcode.com/problems/middle-of-the-linked-list
+MiddleOfTheLinkedList_876.Check();
+
 #endregion
 
 Console.WriteLine("Ok, boy!");
