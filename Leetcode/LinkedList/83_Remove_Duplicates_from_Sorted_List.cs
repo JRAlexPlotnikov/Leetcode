@@ -3,9 +3,9 @@
 namespace Leetcode.LinkedList
 {
     //  https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-    internal class _83_Remove_Duplicates_from_Sorted_List : ITask
+    internal class _83_Remove_Duplicates_from_Sorted_List
     {
-        public ListNode? DeleteDuplicates(ListNode? head, int last = -101)
+        public static ListNode? DeleteDuplicates(ListNode? head, int last = -101)
         {
             ListNode? result = null;
             while (head != null && head.val == last)
@@ -19,33 +19,52 @@ namespace Leetcode.LinkedList
             return result;
         }
 
-        public static void Ckeck()
+        public static void Check()
         {
-            var obj = new _83_Remove_Duplicates_from_Sorted_List();
-
-            ListNode? test1input1 = ListNode.Factory(new int[] { 1, 1, 2, 3, 3 }, 0);
-            int[] test1output1 = new int[] { 1, 2, 3 };
-            ListNode? res1 = obj.DeleteDuplicates(test1input1);
-            if (res1 == null && !res1.Compary(test1output1))
+            var test1 = new _83_TestData()
+            {
+                Input = new int[] { 1, 1, 2, 3, 3 },
+                Output = new int[] { 1, 2, 3 }
+            };
+            if (!CheckResult(test1))
                 throw new Exception("Error test 1");
 
-            ListNode? test2input1 = ListNode.Factory(new int[] { 1, 2, 3 }, 0);
-            int[] test2output1 = new int[] { 1, 2, 3 };
-            ListNode? res2 = obj.DeleteDuplicates(test2input1);
-            if (res2 == null && !res2.Compary(test2output1))
+            var test2 = new _83_TestData()
+            {
+                Input = new int[] { 1, 2, 3 },
+                Output = new int[] { 1, 2, 3 }
+            };
+            if (!CheckResult(test2))
                 throw new Exception("Error test 2");
 
-            ListNode? test3input1 = ListNode.Factory(new int[] { }, 0);
-            //int[] test3output1 = new int[] { };
-            ListNode? res3 = obj.DeleteDuplicates(test3input1);
-            if (res3 != null)
+            var test3 = new _83_TestData()
+            {
+                Input = Array.Empty<int>(),
+                Output = Array.Empty<int>()
+            };
+            if (!CheckResult(test3))
                 throw new Exception("Error test 3");
 
-            ListNode? test4input1 = ListNode.Factory(new int[] { 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 123, 123, 124 }, 0);
-            int[] test4output1 = new int[] { 1, 2, 3, 4, 5, 6, 7, 123, 124 };
-            ListNode? res4 = obj.DeleteDuplicates(test4input1);
-            if (res4 != null && !res4.Compary(test4output1))
+            var test4 = new _83_TestData()
+            {
+                Input = new int[] { 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 123, 123, 124 },
+                Output = new int[] { 1, 2, 3, 4, 5, 6, 7, 123, 124 }
+            };
+            if (!CheckResult(test4))
                 throw new Exception("Error test 4");
         }
+
+        private static bool CheckResult(_83_TestData data)
+        {
+            ListNode? test1input1 = ListNode.Factory(data.Input, 0);
+            ListNode? res = DeleteDuplicates(test1input1);
+            return ListNode.Compary(res, data.Output);
+        }
+    }
+
+    internal class _83_TestData
+    {
+        public int[]? Input { get; set; }
+        public int[]? Output { get; set; }
     }
 }
