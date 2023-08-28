@@ -2,7 +2,7 @@
 
 namespace Leetcode.LinkedList
 {
-    internal class _19_Remove_Nth_Node_From_End_of_List
+    internal class RemoveNthNodeFromEndOfList_19
     {
         public static ListNode? RemoveNthFromEnd(ListNode? head, int n)
         {
@@ -34,7 +34,7 @@ namespace Leetcode.LinkedList
 
         public static void Check()
         {
-            var test1 = new _19_TestData()
+            var test1 = new TestData_19()
             {
                 Input = new int[] { 1, 2, 3, 4, 5 },
                 N = 2,
@@ -43,7 +43,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test1))
                 throw new Exception("Error test 1");
 
-            var test2 = new _19_TestData()
+            var test2 = new TestData_19()
             {
                 Input = new int[] { 1 },
                 N = 1,
@@ -52,7 +52,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test2))
                 throw new Exception("Error test 2");
 
-            var test3 = new _19_TestData()
+            var test3 = new TestData_19()
             {
                 Input = new int[] { 1, 2 },
                 N = 1,
@@ -62,7 +62,7 @@ namespace Leetcode.LinkedList
                 throw new Exception("Error test 3");
         }
 
-        public static bool CheckResult(_19_TestData data)
+        public static bool CheckResult(TestData_19 data)
         {
             ListNode? node = ListNode.Factory(data.Input);
             ListNode? res1 = RemoveNthFromEnd(node, data.N);
@@ -70,7 +70,7 @@ namespace Leetcode.LinkedList
         }
     }
 
-    internal class _19_TestData
+    internal class TestData_19
     {
         public int[]? Input { get; set; }
         public int N { get; set; }

@@ -3,7 +3,7 @@
 namespace Leetcode.LinkedList
 {
     // https://leetcode.com/problems/add-two-numbers/
-    internal class _02_Add_Two_Numbers
+    internal class AddTwoNumbers_2
     {
         public static ListNode? AddTwoNumbers(ListNode? l1 = null, ListNode? l2 = null, byte overflow = 0)
         {
@@ -29,7 +29,7 @@ namespace Leetcode.LinkedList
 
         public static void Check()
         {
-            var test1 = new _02_TestData()
+            var test1 = new TestData_2()
             {
                 Input1 = new int[] { 1, 1, 2, 3, 3 },
                 Input2 = new int[] { 1, 1, 2, 3, 3 },
@@ -38,7 +38,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test1))
                 throw new Exception("Error test 1");
 
-            var test2 = new _02_TestData()
+            var test2 = new TestData_2()
             {
                 Input1 = new int[] { 5, 1, 2, 3, 3 },
                 Input2 = Array.Empty<int>(),
@@ -47,7 +47,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test2))
                 throw new Exception("Error test 2");
 
-            var test3 = new _02_TestData()
+            var test3 = new TestData_2()
             {
                 Input1 = Array.Empty<int>(),
                 Input2 = Array.Empty<int>(),
@@ -56,7 +56,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test3))
                 throw new Exception("Error test 3");
 
-            var test4 = new _02_TestData()
+            var test4 = new TestData_2()
             {
                 Input1 = new int[] { 9, 9, 9, 9, 9, 9, 9 },
                 Input2 = new int[] { 9, 9, 9, 9 },
@@ -65,7 +65,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test4))
                 throw new Exception("Error test 4");
 
-            var test5 = new _02_TestData()
+            var test5 = new TestData_2()
             {
                 Input1 = Array.Empty<int>(),
                 Input2 = new int[] { 5, 1, 2, 3, 3 },
@@ -75,7 +75,7 @@ namespace Leetcode.LinkedList
                 throw new Exception("Error test 5");
         }
 
-        public static bool CheckResult(_02_TestData data)
+        public static bool CheckResult(TestData_2 data)
         {
             ListNode? test1input1 = ListNode.Factory(data.Input1);
             ListNode? test1input2 = ListNode.Factory(data.Input2);
@@ -84,7 +84,7 @@ namespace Leetcode.LinkedList
         }
     }
 
-    internal class _02_TestData
+    internal class TestData_2
     {
         public int[]? Input1 { get; set; }
         public int[]? Input2 { get; set; }

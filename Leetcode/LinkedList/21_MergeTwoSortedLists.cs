@@ -2,9 +2,9 @@
 
 namespace Leetcode.LinkedList
 {
-    internal class _21_Merge_Two_Sorted_Lists
+    internal class MergeTwoSortedLists_21
     {
-        public ListNode? MergeTwoLists(ListNode? list1, ListNode? list2)
+        public static ListNode? MergeTwoLists(ListNode? list1, ListNode? list2)
         {
             ListNode? res = null;
             if (list1 != null && (list1.val) < (list2?.val ?? 51))
@@ -16,7 +16,7 @@ namespace Leetcode.LinkedList
 
         public static void Check()
         {
-            var test1 = new _21_TestData()
+            var test1 = new TestData_21()
             {
                 Input1 = new int[] { 1, 2, 4 },
                 Input2 = new int[] { 1, 3, 4 },
@@ -25,7 +25,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test1))
                 throw new Exception("Error test 1");
 
-            var test2 = new _21_TestData()
+            var test2 = new TestData_21()
             {
                 Input1 = Array.Empty<int>(),
                 Input2 = Array.Empty<int>(),
@@ -34,7 +34,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test2))
                 throw new Exception("Error test 2");
 
-            var test3 = new _21_TestData()
+            var test3 = new TestData_21()
             {
                 Input1 = new int[] { 1, 2, 4 },
                 Input2 = Array.Empty<int>(),
@@ -43,7 +43,7 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test3))
                 throw new Exception("Error test 3");
 
-            var test4 = new _21_TestData()
+            var test4 = new TestData_21()
             {
                 Input1 = Array.Empty<int>(),
                 Input2 = new int[] { 1, 2, 4 },
@@ -53,17 +53,16 @@ namespace Leetcode.LinkedList
                 throw new Exception("Error test 4");
         }
 
-        private static bool CheckResult(_21_TestData data)
+        private static bool CheckResult(TestData_21 data)
         {
-            var obj = new _21_Merge_Two_Sorted_Lists();
             ListNode? test1input1 = ListNode.Factory(data.Input1);
             ListNode? test1input2 = ListNode.Factory(data.Input2);
-            ListNode? res1 = obj.MergeTwoLists(test1input1, test1input2);
+            ListNode? res1 = MergeTwoLists(test1input1, test1input2);
             return ListNode.Compary(res1, data.Output);
         }
     }
 
-    internal class _21_TestData
+    internal class TestData_21
     {
         public int[]? Input1 { get; set; }
         public int[]? Input2 { get; set; }
