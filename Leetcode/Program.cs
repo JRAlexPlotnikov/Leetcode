@@ -23,6 +23,9 @@ ReverseLinkedList_206.Check();
 // #876 https://leetcode.com/problems/middle-of-the-linked-list
 MiddleOfTheLinkedList_876.Check();
 
+// #1290 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+ConvertBinaryNumberInALinkedListToInteger_1290.Check();
+
 #endregion
 
 Console.WriteLine("Ok, boy!");
