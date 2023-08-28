@@ -14,6 +14,10 @@ MergeTwoSortedLists_21.Check();
 // #83 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 RemoveDuplicatesFromSortedList_83.Check();
 
+// #203 https://leetcode.com/problems/remove-linked-list-elements/
+RemoveLinkedListElements_203.Check();
+
+
 #endregion
 
 Console.WriteLine("Ok, boy!");
