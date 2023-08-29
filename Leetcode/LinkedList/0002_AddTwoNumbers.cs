@@ -2,7 +2,6 @@
 
 namespace Leetcode.LinkedList
 {
-    // https://leetcode.com/problems/add-two-numbers/
     internal class AddTwoNumbers_2
     {
         public static ListNode? AddTwoNumbers(ListNode? l1 = null, ListNode? l2 = null, byte overflow = 0)

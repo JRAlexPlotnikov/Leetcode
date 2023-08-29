@@ -2,7 +2,6 @@
 
 namespace Leetcode.LinkedList
 {
-    //  https://leetcode.com/problems/remove-duplicates-from-sorted-list/
     internal class RemoveDuplicatesFromSortedList_83
     {
         public static ListNode? DeleteDuplicates(ListNode? head, int last = -101)

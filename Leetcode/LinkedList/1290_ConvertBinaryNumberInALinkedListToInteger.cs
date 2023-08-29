@@ -54,7 +54,7 @@ namespace Leetcode.LinkedList
                 Output = 47
             };
             if (!CheckResult(test4))
-                throw new Exception("Error test 3");
+                throw new Exception("Error test 4");
         }
 
         private static bool CheckResult(TestData_1290 data)
