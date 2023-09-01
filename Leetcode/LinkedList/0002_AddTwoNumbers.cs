@@ -74,7 +74,7 @@ namespace Leetcode.LinkedList
                 throw new Exception("Error test 5");
         }
 
-        public static bool CheckResult(TestData_2 data)
+        private static bool CheckResult(TestData_2 data)
         {
             ListNode? test1input1 = ListNode.Factory(data.Input1);
             ListNode? test1input2 = ListNode.Factory(data.Input2);

@@ -11,6 +11,9 @@ RemoveNthNodeFromEndOfList_19.Check();
 // #21 https://leetcode.com/problems/merge-two-sorted-lists/
 MergeTwoSortedLists_21.Check();
 
+// #61 https://leetcode.com/problems/rotate-list/
+RotateList_0061.Check();
+
 // #83 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 RemoveDuplicatesFromSortedList_83.Check();
 

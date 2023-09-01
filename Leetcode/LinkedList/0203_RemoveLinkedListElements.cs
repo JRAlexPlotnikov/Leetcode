@@ -45,7 +45,7 @@ namespace Leetcode.LinkedList
                 throw new Exception("Error test 3");
         }
 
-        public static bool CheckResult(TestData_203 data)
+        private static bool CheckResult(TestData_203 data)
         {
             ListNode? node = ListNode.Factory(data.Input);
             ListNode? res1 = RemoveElements(node, data.Val);
