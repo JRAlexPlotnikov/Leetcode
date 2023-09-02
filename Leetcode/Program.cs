@@ -29,6 +29,9 @@ MiddleOfTheLinkedList_876.Check();
 // #1290 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 ConvertBinaryNumberInALinkedListToInteger_1290.Check();
 
+// #2816 https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
+DoubleANumberRepresentedAsALinkedList_2816.Check();
+
 #endregion
 
 Console.WriteLine("Ok, boy!");
