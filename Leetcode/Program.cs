@@ -14,6 +14,9 @@ MergeTwoSortedLists_21.Check();
 // #61 https://leetcode.com/problems/rotate-list/
 RotateList_0061.Check();
 
+// #82 https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+RemoveDuplicatesFromSortedListII_82.Check();
+
 // #83 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 RemoveDuplicatesFromSortedList_83.Check();
 
