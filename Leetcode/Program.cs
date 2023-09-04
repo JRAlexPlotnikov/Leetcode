@@ -50,6 +50,9 @@ using Leetcode.String;
 //// #67 https://leetcode.com/problems/add-binary/
 //AddBinary_67.Check();
 
+//// #387 https://leetcode.com/problems/first-unique-character-in-a-string/
+//FirstUniqueCharacterInAString_0387.Check();
+
 #endregion
 
 Console.WriteLine("Ok, boy!");
