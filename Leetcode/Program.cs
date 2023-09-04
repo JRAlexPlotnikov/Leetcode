@@ -16,6 +16,9 @@ using Leetcode.String;
 //// #21 https://leetcode.com/problems/merge-two-sorted-lists/
 //MergeTwoSortedLists_21.Check();
 
+// #24 https://leetcode.com/problems/swap-nodes-in-pairs/
+SwapNodesInPairs_0024.Check();
+
 //// #61 https://leetcode.com/problems/rotate-list/
 //RotateList_0061.Check();
 
