@@ -16,8 +16,8 @@ using Leetcode.String;
 //// #21 https://leetcode.com/problems/merge-two-sorted-lists/
 //MergeTwoSortedLists_21.Check();
 
-// #23 https://leetcode.com/problems/merge-k-sorted-lists/
-MergeKSortedLists_23.Check();
+//// #23 https://leetcode.com/problems/merge-k-sorted-lists/
+//MergeKSortedLists_23.Check();
 
 //// #24 https://leetcode.com/problems/swap-nodes-in-pairs/
 //SwapNodesInPairs_0024.Check();
@@ -39,6 +39,9 @@ MergeKSortedLists_23.Check();
 
 //// #206 https://leetcode.com/problems/reverse-linked-list/
 //ReverseLinkedList_206.Check();
+
+//// #237 https://leetcode.com/problems/delete-node-in-a-linked-list/description/
+//DeleteNodeInALinkedList_237.Check();
 
 //// #876 https://leetcode.com/problems/middle-of-the-linked-list
 //MiddleOfTheLinkedList_876.Check();
