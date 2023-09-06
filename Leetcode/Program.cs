@@ -31,6 +31,9 @@ using Leetcode.String;
 //// #83 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 //RemoveDuplicatesFromSortedList_83.Check();
 
+//// #141 https://leetcode.com/problems/linked-list-cycle/
+//LinkedListCycle_141.Check();
+
 //// #143 https://leetcode.com/problems/reorder-list/
 //ReorderList_143.Check();
 
