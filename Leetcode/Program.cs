@@ -49,6 +49,9 @@ using Leetcode.String;
 //// #237 https://leetcode.com/problems/delete-node-in-a-linked-list/description/
 //DeleteNodeInALinkedList_237.Check();
 
+//// #725 https://leetcode.com/problems/split-linked-list-in-parts/
+//SplitLinkedListInParts_725.Check();
+
 //// #876 https://leetcode.com/problems/middle-of-the-linked-list
 //MiddleOfTheLinkedList_876.Check();
 
@@ -57,6 +60,9 @@ using Leetcode.String;
 
 //// #2095 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 //DeleteTheMiddleNodeOfALinkedList_2095.Check();
+
+//// #2181 https://leetcode.com/problems/merge-nodes-in-between-zeros/
+//MergeNodesInBetweenZeros_2181.Check();
 
 //// #2816 https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
 //DoubleANumberRepresentedAsALinkedList_2816.Check();
