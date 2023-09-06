@@ -37,6 +37,9 @@ using Leetcode.String;
 //// #143 https://leetcode.com/problems/reorder-list/
 //ReorderList_143.Check();
 
+//// #160 https://leetcode.com/problems/intersection-of-two-linked-lists/
+//IntersectionOfTwoLinkedLists_160.Check();
+
 //// #203 https://leetcode.com/problems/remove-linked-list-elements/
 //RemoveLinkedListElements_203.Check();
 
