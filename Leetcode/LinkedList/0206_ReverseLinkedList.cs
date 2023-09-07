@@ -4,7 +4,7 @@ namespace Leetcode.LinkedList
 {
     internal class ReverseLinkedList_206
     {
-        public static ListNode? ReverseList(ListNode? head)
+        /*public static ListNode? ReverseList(ListNode? head)
         {
             ListNode? temp = head;
             int count = 0;
@@ -22,6 +22,39 @@ namespace Leetcode.LinkedList
                 head = head.next;
             }
             return Init(list, list.Count() - 1);
+        }*/
+
+        public static ListNode? ReverseList(ListNode? head)
+        {
+            ListNode? after = null;
+            ListNode? before = head;
+            ListNode? prev = null;
+            ListNode? last = head;
+            while (before?.next != null)
+            {
+                while (last.next != null)
+                {
+                    prev = last;
+                    last = last.next;
+                }
+
+                if (after != null)
+                {
+                    last.next = before;
+                    after.next = last;
+                    
+                    after = after.next;
+                }
+                else
+                {
+                    last.next = before;
+                    after = last;
+                    head = after;
+                }
+                prev.next = null; 
+            }
+
+            return head;
         }
 
         private static ListNode? Init(int[] list, int index)
