@@ -28,30 +28,28 @@ namespace Leetcode.LinkedList
         {
             ListNode? after = null;
             ListNode? before = head;
-            ListNode? prev = null;
             ListNode? last = head;
-            while (before?.next != null)
+            while (last?.next != null)
             {
-                while (last.next != null)
+                while (last?.next?.next != null)
                 {
-                    prev = last;
                     last = last.next;
                 }
 
                 if (after != null)
                 {
-                    last.next = before;
-                    after.next = last;
-                    
+                    last.next.next = before;
+                    after.next = last.next;
                     after = after.next;
                 }
                 else
                 {
-                    last.next = before;
-                    after = last;
+                    last.next.next = before;
+                    after = last.next;
                     head = after;
                 }
-                prev.next = null; 
+                last.next = null;
+                last = before;
             }
 
             return head;
