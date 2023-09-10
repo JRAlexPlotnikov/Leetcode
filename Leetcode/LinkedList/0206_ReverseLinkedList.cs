@@ -24,7 +24,7 @@ namespace Leetcode.LinkedList
             return Init(list, list.Count() - 1);
         }*/
 
-        public static ListNode? ReverseList(ListNode? head)
+        /*public static ListNode? ReverseList(ListNode? head)
         {
             ListNode? after = null;
             ListNode? before = head;
@@ -53,6 +53,18 @@ namespace Leetcode.LinkedList
             }
 
             return head;
+        }*/
+
+        public static ListNode? ReverseList(ListNode? head)
+        {
+            ListNode? result = null;
+            while (head != null)
+            {
+                var temp = new ListNode(head.val, result);
+                result = temp;
+                head = head.next;
+            }
+            return result;
         }
 
         private static ListNode? Init(int[] list, int index)
@@ -90,6 +102,14 @@ namespace Leetcode.LinkedList
             };
             if (!CheckResult(test3))
                 throw new Exception("Error test 3");
+
+            var test4 = new TestData_206()
+            {
+                Input = new int[] { 1},
+                Output = new int[] { 1 }
+            };
+            if (!CheckResult(test4))
+                throw new Exception("Error test 4");
         }
 
         private static bool CheckResult(TestData_206 data)

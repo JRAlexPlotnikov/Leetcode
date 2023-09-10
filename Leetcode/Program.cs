@@ -44,7 +44,7 @@ using Leetcode.String;
 //RemoveLinkedListElements_203.Check();
 
 //// #206 https://leetcode.com/problems/reverse-linked-list/
-//ReverseLinkedList_206.Check();
+ReverseLinkedList_206.Check();
 
 //// #234 https://leetcode.com/problems/palindrome-linked-list/description/
 //PalindromeLinkedList_234.Check();
