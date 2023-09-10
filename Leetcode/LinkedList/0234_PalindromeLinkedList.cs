@@ -25,7 +25,7 @@ namespace Leetcode.LinkedList
             return true;
         }*/
 
-        public static bool IsPalindrome(ListNode? head)
+        /*public static bool IsPalindrome(ListNode? head)
         {
             int length = 0;
             ListNode? temp = head;
@@ -55,6 +55,30 @@ namespace Leetcode.LinkedList
             }
 
             return true;
+        }*/
+
+        public static bool IsPalindrome(ListNode? head)
+        {
+            ListNode? reverse = ReverseList(head);
+            while (reverse != null || head != null) { 
+                if (reverse.val != head.val)
+                    return false;
+                reverse = reverse.next;
+                head = head.next;
+            }
+            return true;
+        }
+
+        public static ListNode? ReverseList(ListNode? head)
+        {
+            ListNode? result = null;
+            while (head != null)
+            {
+                var temp = new ListNode(head.val, result);
+                result = temp;
+                head = head.next;
+            }
+            return result;
         }
 
         public static void Check()
