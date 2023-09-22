@@ -59,7 +59,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_1290 data)
         {
-            ListNode? node = ListNode.Factory(data.Input, 0);
+            ListNode? node = ListNode.Factory(data.Input);
             int res = GetDecimalValue(node);
             return res == data.Output;
         }

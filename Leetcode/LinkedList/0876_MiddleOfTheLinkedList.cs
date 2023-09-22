@@ -48,7 +48,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_876 data)
         {
-            ListNode? node = ListNode.Factory(data.Input, 0);
+            ListNode? node = ListNode.Factory(data.Input);
             ListNode? res = MiddleNode(node);
             return ListNode.Compary(res, data.Output);
         }

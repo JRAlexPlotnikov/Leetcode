@@ -58,7 +58,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_141 data)
         {
-            ListNode? test1input1 = ListNode.Factory(data.Input, 0);
+            ListNode? test1input1 = ListNode.Factory(data.Input);
             if (data.Pos >= 0)
             {
                 ListNode? head = test1input1;

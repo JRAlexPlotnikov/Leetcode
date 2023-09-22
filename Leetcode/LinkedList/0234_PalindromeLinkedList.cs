@@ -110,7 +110,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_234 data)
         {
-            ListNode? head = ListNode.Factory(data.Input, 0);
+            ListNode? head = ListNode.Factory(data.Input);
             bool res = IsPalindrome(head);
             return res == data.Output;
         }

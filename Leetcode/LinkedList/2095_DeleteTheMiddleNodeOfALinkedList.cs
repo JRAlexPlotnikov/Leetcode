@@ -80,7 +80,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_2095 data)
         {
-            ListNode? node = ListNode.Factory(data.Input, 0);
+            ListNode? node = ListNode.Factory(data.Input);
             ListNode? res = DeleteMiddle(node);
             return ListNode.Compary(res, data.Output);
         }

@@ -33,7 +33,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_237 data)
         {
-            ListNode? head = ListNode.Factory(data.Input, 0);
+            ListNode? head = ListNode.Factory(data.Input);
             ListNode? node = head;
             while (node != null)
             {

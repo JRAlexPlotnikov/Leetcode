@@ -76,7 +76,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_143 data)
         {
-            ListNode? test1input1 = ListNode.Factory(data.Input, 0);
+            ListNode? test1input1 = ListNode.Factory(data.Input);
             ListNode? res = ReorderList(test1input1);
             return ListNode.Compary(res, data.Output);
         }

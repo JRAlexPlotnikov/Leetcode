@@ -91,7 +91,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_725 data)
         {
-            ListNode? test1input1 = ListNode.Factory(data.Input, 0);
+            ListNode? test1input1 = ListNode.Factory(data.Input);
             ListNode?[] resultNode = SplitListToParts(test1input1, data.K);
             bool result = false;
             if (resultNode.Length == data.K && data.K == data.Output.Count)

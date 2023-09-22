@@ -55,7 +55,7 @@ namespace Leetcode.LinkedList
 
         private static bool CheckResult(TestData_83 data)
         {
-            ListNode? test1input1 = ListNode.Factory(data.Input, 0);
+            ListNode? test1input1 = ListNode.Factory(data.Input);
             ListNode? res = DeleteDuplicates(test1input1);
             return ListNode.Compary(res, data.Output);
         }
