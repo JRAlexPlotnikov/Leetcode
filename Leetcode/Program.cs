@@ -61,6 +61,9 @@ using Leetcode.String;
 //// #1290 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 //ConvertBinaryNumberInALinkedListToInteger_1290.Check();
 
+// #1721 https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
+SwappingNodesInALinkedList_1721.Check();
+
 //// #2095 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 //DeleteTheMiddleNodeOfALinkedList_2095.Check();
 
