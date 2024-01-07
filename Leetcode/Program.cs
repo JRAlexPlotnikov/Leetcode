@@ -1,5 +1,6 @@
 ﻿using Leetcode.LinkedList;
 using Leetcode.String;
+using static System.Net.Mime.MediaTypeNames;
 
 #region Array
 
@@ -61,8 +62,11 @@ using Leetcode.String;
 //// #1290 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 //ConvertBinaryNumberInALinkedListToInteger_1290.Check();
 
-// #1721 https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
-SwappingNodesInALinkedList_1721.Check();
+// #1721 https://leetcode.com/problems/swapping-nodes-in-a-linked-list/ - не решена
+//SwappingNodesInALinkedList_1721.Check();
+
+// #1019 https://leetcode.com/problems/next-greater-node-in-linked-list/
+//NextGreaterNodeInLinkedList_1019.Check();
 
 //// #2095 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 //DeleteTheMiddleNodeOfALinkedList_2095.Check();
