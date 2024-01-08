@@ -68,6 +68,9 @@ using static System.Net.Mime.MediaTypeNames;
 // #1019 https://leetcode.com/problems/next-greater-node-in-linked-list/
 //NextGreaterNodeInLinkedList_1019.Check();
 
+// #1669 https://leetcode.com/problems/merge-in-between-linked-lists/
+MergeInBetweenLinkedLists_1669.Check();
+
 //// #2095 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 //DeleteTheMiddleNodeOfALinkedList_2095.Check();
 
