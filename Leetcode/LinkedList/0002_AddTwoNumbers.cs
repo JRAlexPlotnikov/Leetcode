@@ -4,27 +4,50 @@ namespace Leetcode.LinkedList
 {
     internal class AddTwoNumbers_2
     {
-        public static ListNode? AddTwoNumbers(ListNode? l1 = null, ListNode? l2 = null, byte overflow = 0)
+        public static ListNode? AddTwoNumbers(ListNode? l1 = null, ListNode? l2 = null)
         {
+            ListNode? temp = null;
+            bool o = false;
+            while (l1 != null || l2 != null || o)
+            {
+                temp = new ListNode(((l1?.val ?? 0) + (l2?.val ?? 0) + ((o) ? 1 : 0)) % 10, temp);
+                o = ((l1?.val ?? 0) + (l2?.val ?? 0) + ((o) ? 1 : 0)) / 10 >= 1;
+
+                l1 = l1?.next;
+                l2 = l2?.next;
+            }
+
             ListNode? res = null;
-            int sum = overflow;
-
-            if (l1 != null)
+            while (temp != null)
             {
-                sum += l1.val;
+                res = new ListNode(temp.val, res);
+                temp = temp.next;
             }
 
-            if (l2 != null)
-            {
-                sum += l2.val;
-            }
-
-            if (l1 != null || l2 != null || overflow > 0)
-            {
-                res = new ListNode(sum % 10, AddTwoNumbers(l1?.next, l2?.next, (byte)(sum / 10)));
-            }
             return res;
         }
+
+        //public static ListNode? AddTwoNumbers(ListNode? l1 = null, ListNode? l2 = null, byte overflow = 0)
+        //{
+        //    ListNode? res = null;
+        //    int sum = overflow;
+
+        //    if (l1 != null)
+        //    {
+        //        sum += l1.val;
+        //    }
+
+        //    if (l2 != null)
+        //    {
+        //        sum += l2.val;
+        //    }
+
+        //    if (l1 != null || l2 != null || overflow > 0)
+        //    {
+        //        res = new ListNode(sum % 10, AddTwoNumbers(l1?.next, l2?.next, (byte)(sum / 10)));
+        //    }
+        //    return res;
+        //}
 
         public static void Check()
         {
