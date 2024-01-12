@@ -6,42 +6,78 @@ namespace Leetcode.LinkedList
     {
         public static ListNode? RemoveNthFromEnd(ListNode? head, int n)
         {
-            ListNode? revert = null;
-            while (head != null)
+            int count = 0;
+            ListNode? temp = head;
+            while (temp != null)
             {
-                revert = new ListNode(head.val, revert);
-                head = head.next;
+                count++;
+                temp = temp.next;
             }
 
-            if (n == 1)
+            if (n == 1 && count == 1)
             {
-                revert = revert?.next;
+                head = null;
+            }
+            else if (n == count)
+            {
+                head = head?.next;
             }
             else
             {
-                int i = 1;
-                head = revert;
-                while (head != null)
+                temp = head;
+                while (temp != null)
                 {
-                    if (i == n - 1)
+                    count--;
+                    if (count == n)
                     {
-                        head.next = head?.next?.next;
+                        temp.next = temp?.next?.next;
                         break;
                     }
-                    i++;
-                    head = head.next;
+                    temp = temp.next;
                 }
-            }
-
-            head = null;
-            while (revert != null)
-            {
-                head = new ListNode(revert.val, head);
-                revert = revert.next;
             }
 
             return head;
         }
+
+        //public static ListNode? RemoveNthFromEnd(ListNode? head, int n)
+        //{
+        //    ListNode? revert = null;
+        //    while (head != null)
+        //    {
+        //        revert = new ListNode(head.val, revert);
+        //        head = head.next;
+        //    }
+
+        //    if (n == 1)
+        //    {
+        //        revert = revert?.next;
+        //    }
+        //    else
+        //    {
+        //        int i = 1;
+        //        head = revert;
+        //        while (head != null)
+        //        {
+        //            if (i == n - 1)
+        //            {
+        //                head.next = head?.next?.next;
+        //                break;
+        //            }
+        //            i++;
+        //            head = head.next;
+        //        }
+        //    }
+
+        //    head = null;
+        //    while (revert != null)
+        //    {
+        //        head = new ListNode(revert.val, head);
+        //        revert = revert.next;
+        //    }
+
+        //    return head;
+        //}
 
 
         //public static ListNode? RemoveNthFromEnd(ListNode? head, int n)
