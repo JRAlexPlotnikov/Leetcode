@@ -6,29 +6,42 @@ namespace Leetcode.LinkedList
     {
         public static ListNode? GetIntersectionNode(ListNode? headA, ListNode? headB)
         {
-            int val;
-            bool flag = false;
-            while (headA != null)
+            ListNode? A = headA;
+            ListNode? B = headB;
+            while (A != B)
             {
-                val = headA.val;
-                headA.val = int.MaxValue;
-                ListNode? temp = headB;
-                while (temp != null)
-                {
-                    if (temp.val == int.MaxValue) {
-                        flag = true;
-                        break;
-                    }
-                    temp = temp.next;
-                }
-                headA.val = val;
-                if (flag)
-                    break;
-                headA = headA.next;
+                A = A == null ? headB : A.next;
+                B = B == null ? headA : B.next;
             }
 
-            return headA;
+            return B;
         }
+
+        //public static ListNode? GetIntersectionNode(ListNode? headA, ListNode? headB) //slow
+        //{
+        //    int val;
+        //    bool flag = false;
+        //    while (headA != null)
+        //    {
+        //        val = headA.val;
+        //        headA.val = int.MaxValue;
+        //        ListNode? temp = headB;
+        //        while (temp != null)
+        //        {
+        //            if (temp.val == int.MaxValue) {
+        //                flag = true;
+        //                break;
+        //            }
+        //            temp = temp.next;
+        //        }
+        //        headA.val = val;
+        //        if (flag)
+        //            break;
+        //        headA = headA.next;
+        //    }
+
+        //    return headA;
+        //}
 
         public static void Check()
         {
