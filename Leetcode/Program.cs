@@ -1,6 +1,4 @@
 ﻿using Leetcode.LinkedList;
-using Leetcode.String;
-using static System.Net.Mime.MediaTypeNames;
 
 #region Array
 
@@ -36,7 +34,7 @@ using static System.Net.Mime.MediaTypeNames;
 //LinkedListCycle_141.Check();
 
 //// #143 https://leetcode.com/problems/reorder-list/
-//ReorderList_143.Check();
+ReorderList_143.Check();
 
 //// #160 https://leetcode.com/problems/intersection-of-two-linked-lists/
 //IntersectionOfTwoLinkedLists_160.Check();
@@ -54,7 +52,7 @@ using static System.Net.Mime.MediaTypeNames;
 //DeleteNodeInALinkedList_237.Check();
 
 //// #445 https://leetcode.com/problems/add-two-numbers-ii/
-AddTwoNumbersII_0445.Check();
+//AddTwoNumbersII_0445.Check();
 
 //// #725 https://leetcode.com/problems/split-linked-list-in-parts/
 //SplitLinkedListInParts_725.Check();
@@ -65,8 +63,8 @@ AddTwoNumbersII_0445.Check();
 //// #1290 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 //ConvertBinaryNumberInALinkedListToInteger_1290.Check();
 
-// #1721 https://leetcode.com/problems/swapping-nodes-in-a-linked-list/ - не решена
-//SwappingNodesInALinkedList_1721.Check();
+// #1721 https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
+SwappingNodesInALinkedList_1721.Check();
 
 // #1019 https://leetcode.com/problems/next-greater-node-in-linked-list/
 //NextGreaterNodeInLinkedList_1019.Check();

@@ -1,9 +1,4 @@
 ﻿using Leetcode.LinkedList.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Leetcode.LinkedList
 {
@@ -12,40 +7,77 @@ namespace Leetcode.LinkedList
         public static ListNode? ReorderList(ListNode? head)
         {
             int length = 0;
-            ListNode? node = head;
-            while (node != null)
+            ListNode? temp = head;
+            ListNode? revert = null;
+            while (temp != null)
             {
+                revert = new ListNode(temp.val, revert);
                 length++;
-                node = node.next;
+                temp = temp.next;
             }
 
-            node = head;
-            int index;
-            while (node != null && length >= 3)
+            if (length < 3)
+                return head;
+
+            int i = 2;
+            temp = head;
+            bool f = length % 2 != 0;
+            ListNode? next = temp?.next;
+            while (temp != null)
             {
-                ListNode? first = node;
-                ListNode? last = node;
-                while (last.next != null)
-                    last = last.next;
+                temp.next = f && next == null ? null :
+                    new ListNode((revert?.val ?? 0), next);
 
-                last.next = first.next;
-                first.next = last;
+                if (next == null)
+                    break;
 
+                revert = revert?.next;
+                temp = temp?.next?.next;
 
-                first = head;
-                index = 0;
-                while (index < length - 1)
-                {
-                    index++;
-                    first = first.next;
-                }
-                first.next = null;
+                i++;
+                length--;
+                next = (i >= length) ? null : temp?.next;
 
-                node = node?.next?.next;
             }
 
             return head;
         }
+        //{
+        //    int length = 0;
+        //    ListNode? node = head;
+        //    while (node != null)
+        //    {
+        //        length++;
+        //        node = node.next;
+        //    }
+
+        //    node = head;
+        //    int index;
+        //    while (node != null && length >= 3)
+        //    {
+        //        ListNode? first = node;
+        //        ListNode? last = node;
+        //        while (last.next != null)
+        //            last = last.next;
+
+        //        last.next = first.next;
+        //        first.next = last;
+
+
+        //        first = head;
+        //        index = 0;
+        //        while (index < length - 1)
+        //        {
+        //            index++;
+        //            first = first.next;
+        //        }
+        //        first.next = null;
+
+        //        node = node?.next?.next;
+        //    }
+
+        //    return head;
+        //}
 
         public static void Check()
         {
