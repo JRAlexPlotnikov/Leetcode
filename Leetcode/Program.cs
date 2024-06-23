@@ -89,6 +89,9 @@ using Leetcode.String;
 //// #3 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 //LongestSubstringWithoutRepeatingCharacters_0003.Check();
 
+//// #58 https://leetcode.com/problems/length-of-last-word/description/
+//LengthOfLastWord_0058.Check();
+
 //// #67 https://leetcode.com/problems/add-binary/
 //AddBinary_67.Check();
 
