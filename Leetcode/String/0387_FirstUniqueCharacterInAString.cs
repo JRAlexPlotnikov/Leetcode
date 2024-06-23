@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode.String
+﻿namespace Leetcode.String
 {
     internal class FirstUniqueCharacterInAString_0387
     {

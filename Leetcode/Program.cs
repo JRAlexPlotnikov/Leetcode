@@ -1,4 +1,5 @@
 ﻿using Leetcode.LinkedList;
+using Leetcode.String;
 
 #region Array
 
@@ -34,7 +35,7 @@
 //LinkedListCycle_141.Check();
 
 //// #143 https://leetcode.com/problems/reorder-list/
-ReorderList_143.Check();
+//ReorderList_143.Check();
 
 //// #160 https://leetcode.com/problems/intersection-of-two-linked-lists/
 //IntersectionOfTwoLinkedLists_160.Check();
@@ -64,7 +65,7 @@ ReorderList_143.Check();
 //ConvertBinaryNumberInALinkedListToInteger_1290.Check();
 
 // #1721 https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
-SwappingNodesInALinkedList_1721.Check();
+//SwappingNodesInALinkedList_1721.Check();
 
 // #1019 https://leetcode.com/problems/next-greater-node-in-linked-list/
 //NextGreaterNodeInLinkedList_1019.Check();
@@ -84,6 +85,9 @@ SwappingNodesInALinkedList_1721.Check();
 #endregion
 
 #region String
+
+//// #3 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+//LongestSubstringWithoutRepeatingCharacters_0003.Check();
 
 //// #67 https://leetcode.com/problems/add-binary/
 //AddBinary_67.Check();
