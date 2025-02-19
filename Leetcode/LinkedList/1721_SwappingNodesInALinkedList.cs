@@ -9,6 +9,14 @@ namespace Leetcode.LinkedList
             if (head == null || head.next == null)
                 return head;
 
+            if (head.next.next == null)
+            {
+                head.next.next = head;
+                head = head.next;
+                head.next.next = null;
+                return head;
+            }
+
             int length = 0;
             ListNode? temp = head;
             while (temp != null)
@@ -18,6 +26,7 @@ namespace Leetcode.LinkedList
             }
 
             k = (length - k >= k) ? k : length - k + 1;
+
 
             temp = head;
             ListNode? first = null;
@@ -35,10 +44,17 @@ namespace Leetcode.LinkedList
                 temp = temp.next; 
             }
 
-            ListNode? tails = first.next.next;
-            last.next = first.next;
-            last.next = null;
 
+            temp = (first == null) ? head.next: first?.next?.next;
+            if (first != null)
+                first.next = last.next;
+            else
+                head = last.next;
+            ListNode? tails2 = first != null ? first?.next : head;
+            tails2.next = last?.next?.next;
+            
+            last.next.next = temp;
+            last.next = tails2;
 
 
             return head;
@@ -48,9 +64,9 @@ namespace Leetcode.LinkedList
         {
             var test1 = new TestData_1721()
             {
-                Input = new int[] { 1, 2, 3, 4, 5 },
+                Input = new int[] { 1, 2, 3, 4, 5, 6 },
                 K = 2,
-                Output = new int[] { 1, 4, 3, 2, 5 },
+                Output = new int[] { 1, 5, 3, 4, 2, 6 },
             };
             if (!CheckResult(test1))
                 throw new Exception("Error test");
@@ -73,6 +89,15 @@ namespace Leetcode.LinkedList
             if (!CheckResult(test3))
                 throw new Exception("Error test");
 
+            var test3_2 = new TestData_1721()
+            {
+                Input = new int[] { 1, 2, 3, 4, 5 },
+                K = 3,
+                Output = new int[] { 1, 2, 3, 4, 5 },
+            };
+            if (!CheckResult(test3_2))
+                throw new Exception("Error test");
+
             var test4 = new TestData_1721()
             {
                 Input = new int[] { 1 },
@@ -80,15 +105,6 @@ namespace Leetcode.LinkedList
                 Output = new int[] { 1 },
             };
             if (!CheckResult(test4))
-                throw new Exception("Error test");
-
-            var test5 = new TestData_1721()
-            {
-                Input = new int[] { 1, 2 },
-                K = 1,
-                Output = new int[] { 2, 1 },
-            };
-            if (!CheckResult(test5))
                 throw new Exception("Error test");
 
             var test6 = new TestData_1721()
@@ -116,6 +132,15 @@ namespace Leetcode.LinkedList
                 Output = new int[] { 1, 2, 10, 4, 5, 6, 7, 8, 9, 3, 11, 12 },
             };
             if (!CheckResult(test8))
+                throw new Exception("Error test");
+
+            var test5 = new TestData_1721()
+            {
+                Input = new int[] { 1, 2 },
+                K = 1,
+                Output = new int[] { 2, 1 },
+            };
+            if (!CheckResult(test5))
                 throw new Exception("Error test");
         }
 
